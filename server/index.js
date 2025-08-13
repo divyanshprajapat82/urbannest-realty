@@ -8,7 +8,14 @@ require("dotenv").config();
 
 let app = express();
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+
+app.use(cors({
+  origin: 'https://urbannest-realty.vercel.app/',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 
 app.use("/uploads/accountSetting", express.static("uploads/accountSetting"));
 app.use("/uploads/propertyType", express.static("uploads/propertyType"));
