@@ -5,7 +5,7 @@ const {
   localitiesDelete,
   localitiesSingle,
   localitiesUpdate,
-} = require("../../controllers/admin/LocalitiesController");
+} = require("../../controllers/admin/localitiesController");
 
 let LocalitiesRoutes = express.Router();
 
