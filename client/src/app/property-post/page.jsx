@@ -36,7 +36,7 @@ export default function page() {
     e.preventDefault()
 
     let formData = new FormData(e.target)
-    axios.post(`http://localhost:8000/admin/properties/insert`, formData)
+    axios.post(`${APIBASEURL}properties/insert`, formData)
       .then((res) => res.data)
       .then((finalData) => {
         // if (finalData.status) {
@@ -48,7 +48,7 @@ export default function page() {
   }
 
   let getPropertyType = () => {
-    axios.get(`http://localhost:8000/admin/property-Type/view`)
+    axios.get(`${APIBASEURL}property-Type/view`)
       .then((res) => res.data)
       .then((finalData) => {
         setPropertyType(finalData.data)
@@ -56,7 +56,7 @@ export default function page() {
   }
 
   let getLocalities = () => {
-    axios.get(`http://localhost:8000/admin/localities/view`)
+    axios.get(`${APIBASEURL}localities/view`)
       .then((res) => res.data)
       .then((finalData) => {
         setLocalitiesList(finalData.data)
