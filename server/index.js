@@ -11,7 +11,8 @@ app.use(express.json());
 // app.use(cors());
 
 app.use(cors({
-  origin: 'https://urbannest-realty.vercel.app/',
+  // origin: 'https://urbannest-realty.vercel.app/',
+  origin: ['https://urbannest-realty.vercel.app/','https://urbannest-realty-admin.vercel.app/],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
