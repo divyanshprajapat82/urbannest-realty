@@ -28,6 +28,7 @@ export default function page() {
 
 
   // let VITE_APIPATH = import.meta.env.VITE_APIPATH
+  let APIBASEURL = process.env.NEXT_PUBLIC_APIBASEURL
 
 
 
