@@ -68,7 +68,7 @@ export default function page() {
     getLocalities()
   }, [])
   return (
-    <div className='bg-[#F8F8FC]'>
+    <div className='bg-[#F8F8FC] text-[#000]'>
       <div className='max-w-[1000px] m-auto mt-2'>
         <h1 className='text-[30px] font-bold '>Post Properties</h1>
         <div className='max-w-[800px] m-auto bg-[#fff] mt-4 p-6 rounded-2xl'>
