@@ -40,7 +40,7 @@ export default function page() {
     <>
       {/* <ToastContainer /> */}
 
-      <div className='bg-[#F8F8FC]'>
+      <div className='bg-[#F8F8FC] text-[#000]'>
         <div className='max-w-[1200px] mx-auto p-2 '>
           <p className='flex items-center text-[15px] text-[#555]'>
             <Link href={"/"} >Home</Link>
