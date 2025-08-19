@@ -114,7 +114,7 @@ export default function View_Properties() {
                   </td>
                   <td className=" p-3 text-center ">
                     <div className='flex justify-center'>
-                      <Link to={`/add-customers/${items._id}`}>
+                      <Link to={`/add-properties/${items._id}`}>
                         <button className="bg-[#F1F1F1] text-[#000] border border-[#00000025] p-3 rounded-l-[10px] cursor-pointer">
                           <FaRegEdit />
                         </button>
