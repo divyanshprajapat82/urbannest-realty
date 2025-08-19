@@ -71,7 +71,7 @@ export default function Add_Customers() {
         <>
             <ToastContainer />
             <div className='max-w-[1000px] m-auto mt-2'>
-                <h1 className='text-[30px] font-bold '>Add Property Type</h1>
+                <h1 className='text-[30px] font-bold '>Add Custimers</h1>
                 <div className='max-w-[500px] m-auto bg-[#fff] mt-4 p-4 rounded-2xl'>
 
 
