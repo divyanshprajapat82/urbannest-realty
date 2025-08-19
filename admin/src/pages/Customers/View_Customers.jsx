@@ -46,7 +46,7 @@ export default function View_Customers() {
             <ToastContainer />
 
             <div className='max-w-[1000px] m-auto mt-2'>
-                <h1 className='text-[30px] font-bold '>View Localitiess</h1>
+                <h1 className='text-[30px] font-bold '>View Custimers</h1>
                 <div className='max-w-[900px] m-auto bg-[#fff] mt-4 p-4 rounded-2xl'>
                     <div className="flex items-center justify-between flex-wrap mb-2 ">
                         <div className='flex h-[35px] items-center w-[300px]'>
