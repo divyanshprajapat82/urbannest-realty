@@ -107,6 +107,7 @@ export default function Home() {
     //   </footer>
     // </div>
     <>
+    <div className="bg-[#fff] text-[#fff]">
       <TopSection />
       <ImpactfulProperties />
       <PropertyOwner />
@@ -114,6 +115,7 @@ export default function Home() {
       <About />
       <HappyCustomer />
       <JodhpurList />
+    </div>
     </>
   );
 }
