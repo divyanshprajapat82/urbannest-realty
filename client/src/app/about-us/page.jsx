@@ -8,6 +8,7 @@ import JodhpurList from '../components/home/JodhpurList'
 export default function page() {
   return (
     <>
+      <div className="bg-[#fff] text-[#000]">
       <div className='max-w-[1200px] mx-auto p-2 '>
         <p className='flex items-center text-[15px] text-[#555]'>
           <Link href={"/"} >Home</Link>
@@ -22,6 +23,7 @@ export default function page() {
       <About />
       <AboutTime />
       <JodhpurList />
+        </div>
     </>
   )
 }
