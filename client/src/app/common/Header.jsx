@@ -104,7 +104,12 @@ export default function Header() {
                     <div>
                         <div className='flex items-center justify-between'>
                             <div className='cursor-pointer'>
-                                <img src="/images/Urbannes.png" width={100} alt="surana-logo" />
+                                {accountSetting.map((items, index) => (
+
+                                    // <img src={items.LogoImage} className='sm:w-[160px] w-[120px]' alt="surana-logo" />
+                                    // <img src="/images/Urbannes.png" className='sm:w-[160px] w-[120px]' alt="surana-logo" />
+                                <img src={items.LogoImage} width={100} alt="surana-logo" />
+                                ))}
                             </div>
                             <div className=''>
                                 <button onClick={() => setNavBar(false)} className='px-3 py-2 text-[#000] text-[25px] rounded-[6px] flex items-center gap-2 cursor-pointer'> <IoClose /></button>
