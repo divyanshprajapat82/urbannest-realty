@@ -55,7 +55,6 @@ app.use("/uploads/adminProfile", express.static("uploads/adminProfile"));
 app.use("/admin", adminRouter);
 app.use("/web", webRouter);
 
-<<<<<<< HEAD
 // mongoose.connect("mongodb://127.0.0.1:27017/urbannest").then(async (res) => {
   // mongoose.connect("mongodb+srv://divyanshprajapat82:Y5EqfC8M4jOqjNWk@cluster0.8jno2cn.mongodb.net/").then(async (res) => {
 
