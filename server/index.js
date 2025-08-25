@@ -56,12 +56,11 @@ app.use("/admin", adminRouter);
 app.use("/web", webRouter);
 
 <<<<<<< HEAD
-mongoose.connect("mongodb://127.0.0.1:27017/urbannest").then(async (res) => {
+// mongoose.connect("mongodb://127.0.0.1:27017/urbannest").then(async (res) => {
   // mongoose.connect("mongodb+srv://divyanshprajapat82:Y5EqfC8M4jOqjNWk@cluster0.8jno2cn.mongodb.net/").then(async (res) => {
-=======
+
 // mongoose.connect("mongodb://127.0.0.1:27017/urbannest").then(async (res) => {
 mongoose.connect("mongodb+srv://divyanshprajapat82:Y5EqfC8M4jOqjNWk@cluster0.8jno2cn.mongodb.net/").then(async (res) => {
->>>>>>> d9bb21a17bedee0d91d9fb818ce5a1ca73fe9d92
   let checkAdmin = await AdminModel.find();
   if (checkAdmin.length == 0) {
     AdminModel.insertOne({
