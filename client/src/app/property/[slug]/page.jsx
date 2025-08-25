@@ -38,7 +38,7 @@ export default function page() {
 
     return (
         <>
-            <div className='bg-[#F8F8FC]'>
+            <div className='bg-[#F8F8FC] text-[#000]'>
                 <div className='max-w-[1200px] mx-auto p-2 '>
                     {filterProperties.map((items, index) => (
                         <div>

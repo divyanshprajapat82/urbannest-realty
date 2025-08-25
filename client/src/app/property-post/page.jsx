@@ -28,6 +28,7 @@ export default function page() {
 
 
   // let VITE_APIPATH = import.meta.env.VITE_APIPATH
+  let APIBASEURL = process.env.NEXT_PUBLIC_APIBASEURL
 
 
 
@@ -35,7 +36,7 @@ export default function page() {
     e.preventDefault()
 
     let formData = new FormData(e.target)
-    axios.post(`http://localhost:8000/admin/properties/insert`, formData)
+    axios.post(`https://urbannest-realty.onrender.com/admin/properties/insert`, formData)
       .then((res) => res.data)
       .then((finalData) => {
         // if (finalData.status) {
@@ -47,7 +48,7 @@ export default function page() {
   }
 
   let getPropertyType = () => {
-    axios.get(`http://localhost:8000/admin/property-Type/view`)
+    axios.get(`https://urbannest-realty.onrender.com/admin/property-Type/view`)
       .then((res) => res.data)
       .then((finalData) => {
         setPropertyType(finalData.data)
@@ -55,7 +56,7 @@ export default function page() {
   }
 
   let getLocalities = () => {
-    axios.get(`http://localhost:8000/admin/localities/view`)
+    axios.get(`https://urbannest-realty.onrender.com/admin/localities/view`)
       .then((res) => res.data)
       .then((finalData) => {
         setLocalitiesList(finalData.data)

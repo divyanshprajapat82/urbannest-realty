@@ -28,6 +28,7 @@ export default function page() {
 
     return (
         <>
+            <div className="bg-[#fff] text-[#000]">
             <div className='max-w-[1200px] mx-auto p-2 '>
                 <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1'>
                     {ProductData.map((items, index) => (
@@ -72,6 +73,7 @@ export default function page() {
                     ))}
                 </div>
             </div>
+                </div>
         </>
     )
 }

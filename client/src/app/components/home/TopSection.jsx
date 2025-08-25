@@ -34,12 +34,20 @@ export default function TopSection() {
                         <div className='md:order-first order-last relative'>
                             <div className='md:block hidden'>
                                 <h1 className='text-[35px]/[42px] text-[#000] md:mt-[80px] mt-[40px]'>The Most Trusted Real Estate Agent & Property Dealer in Jodhpur</h1>
+<<<<<<< HEAD
                                 <p className='mt-4 text-[#000]'>Rajasthan's 1st local online property listing website.</p>
+=======
+                                <p className='mt-4'>Rajasthan's 1st local online property listing website.</p>
+>>>>>>> d9bb21a17bedee0d91d9fb818ce5a1ca73fe9d92
                                 <h2 className='text-[#DD3846] text-[28px] font-alkatra'>Property chaiye ? Yahin aaiye !</h2>
                             </div>
                             <div className='md:hidden block text-center '>
                                 <h1 className='text-[35px]/[42px] text-[#000] md:mt-[80px] mt-[40px]'>The Most Trusted Real Estate Agent & Property Dealer in Jodhpur</h1>
+<<<<<<< HEAD
                                 <p className='mt-4 text-[#000]'>Rajasthan's 1st local online property listing website.</p>
+=======
+                                <p className='mt-4'>Rajasthan's 1st local online property listing website.</p>
+>>>>>>> d9bb21a17bedee0d91d9fb818ce5a1ca73fe9d92
                                 <h2 className='text-[#DD3846] text-[28px] font-alkatra'>Property chaiye ? Yahin aaiye !</h2>
                             </div>
 
