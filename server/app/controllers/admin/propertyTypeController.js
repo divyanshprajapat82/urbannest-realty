@@ -5,8 +5,10 @@ let propertyTypeInsert = async (req, res) => {
   let obj;
 
   if (req.file) {
-    insertObj["propertyTypeImage"] = req.file.filename;
+    insertObj["propertyTypeImage"] = req.file.path;
   }
+
+
 
   try {
     let data = await PropertyTypeModel.insertOne(insertObj);
@@ -31,7 +33,7 @@ let propertyTypeView = async (req, res) => {
   let obj = {
     status: 1,
     msg: "Data View",
-    staticPath: process.env.PROPERTYTYPESTATICPATH,
+    // staticPath: process.env.PROPERTYTYPESTATICPATH,
     data,
   };
 
@@ -86,15 +88,9 @@ let propertyTypeUpdate = async (req, res) => {
   let { id } = req.params;
   let obj;
 
+
   if (req.file) {
-    insertObj["propertyTypeImage"] = req.file.filename;
-    let imgView = await PropertyTypeModel.find({ _id: id }).select(
-      "propertyTypeImage"
-    );
-    if (imgView?.propertyTypeImage) {
-      let deletePath = "uploads/propertyType/" + imgView.propertyTypeImage;
-      fs.unlinkSync(deletePath);
-    }
+    insertObj["propertyTypeImage"] = req.file.path;
   }
 
   try {

@@ -45,7 +45,7 @@ export default function DiscoverProperties() {
                                 <div className='p-8 text-center'>
                                     <h1 className='lg:text-[30px] text-[20px]'>{items.propertyTypeName}</h1>
                                 </div>
-                                <img src={staticPath + items.propertyTypeImage} className='w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300' alt="" />
+                                <img src={items.propertyTypeImage} className='w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300' alt="" />
                             </Link>
                         </div>
                     ))}

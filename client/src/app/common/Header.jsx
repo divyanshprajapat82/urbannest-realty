@@ -2,11 +2,12 @@
 import axios from 'axios';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { FaArrowRightLong, FaBars } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
+import { contextData } from '../context/MainContext';
 
 
 
@@ -15,6 +16,7 @@ export default function Header() {
     const [navBar, setNavBar] = useState(false)
     // const [navButton, setNavButton] = useState(1)
     let pathName = usePathname()
+    let { accountSetting } = useContext(contextData)
 
     const [propertyType, setPropertyType] = useState([])
 
@@ -45,7 +47,11 @@ export default function Header() {
                             </div>
                             <div className='cursor-pointer'>
                                 {/* <img src="/images/surana-logo.png" alt="surana-logo" /> */}
-                                <img src="/images/Urbannes.png" className='sm:w-[160px] w-[120px]' alt="surana-logo" />
+                                {accountSetting.map((items, index) => (
+
+                                    <img src={items.LogoImage} className='sm:w-[160px] w-[120px]' alt="surana-logo" />
+                                    // <img src="/images/Urbannes.png" className='sm:w-[160px] w-[120px]' alt="surana-logo" />
+                                ))}
                             </div>
                         </div>
                         <div className='lg:block hidden'>

@@ -36,7 +36,7 @@ export default function page() {
                                 <div className=' flex justify-center h-[200px] object-cover overflow-hidden'>
                                     {/* <img src="/images/Screenshot20131955.webp" alt="" /> */}
                                     <div className='relative object-cover w-full'>
-                                        <img src={staticPath + items.singleImage} className='w-full h-full object-cover' alt="" />
+                                        <img src={items.singleImage} className='w-full h-full object-cover' alt="" />
                                         <div className='absolute top-2 right-2'>
                                             <div className='flex items-center rounded-[5px] overflow-hidden'>
                                                 <div className='px-2 py-1.5 text-[12px] font-semibold bg-[#DD3846] text-[#fff]'>{items.propertyType.propertyTypeName}</div>

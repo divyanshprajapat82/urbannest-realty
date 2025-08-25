@@ -46,7 +46,7 @@ export default function Profile() {
           adminPhone: finalData.data[0].adminPhone,
           // adminImage: finalData.data[0].adminImage
         })
-        setImageTarget(finalData.staticPath + finalData.data[0].adminImage)
+        setImageTarget(finalData.data[0].adminImage)
       })
   }, [])
 

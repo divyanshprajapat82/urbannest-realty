@@ -3,13 +3,23 @@ const { PropertiesModel } = require("../../models/propertiesModel");
 let propertiesInsert = async (req, res) => {
   let obj = { ...req.body };
 
+  // if (req.files) {
+  //   if (req.files.singleImage) {
+  //     obj["singleImage"] = req.files.singleImage[0].filename;
+  //   }
+  //   if (req.files.multipleImages) {
+  //     obj["multipleImages"] = req.files.multipleImages.map(
+  //       (items) => items.filename
+  //     );
+  //   }
+  // }
   if (req.files) {
     if (req.files.singleImage) {
-      obj["singleImage"] = req.files.singleImage[0].filename;
+      obj["singleImage"] = req.files.singleImage[0].path;
     }
     if (req.files.multipleImages) {
       obj["multipleImages"] = req.files.multipleImages.map(
-        (items) => items.filename
+        (items) => items.path
       );
     }
   }

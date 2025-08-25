@@ -20,7 +20,7 @@ export function MainContext({ children }) {
             .then((finalData) => {
                 setAdminData(finalData.data[0]);
                 setAdminStaticPath(finalData.staticPath);
-                // console.log(finalData.data[0]);
+                console.log(finalData.data[0]);
             })
     }, [])
     // adminData, adminStaticPath

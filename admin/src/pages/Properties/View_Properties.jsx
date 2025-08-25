@@ -104,7 +104,7 @@ export default function View_Properties() {
                     </button></th>
                   <td className='p-3 text-center'>
                     <div className='flex justify-center h-[60px] overflow-hidden '>
-                      <img src={staticPath + items.singleImage} className='rounded-[5px] object-cover' width={60} alt="" />
+                      <img src={items.singleImage} className='rounded-[5px] object-cover' width={60} alt="" />
                     </div>
                   </td>
                   <td className='p-3 text-center'>
@@ -153,11 +153,11 @@ export default function View_Properties() {
                   </ul>
                   <div>
                     <div className='flex justify-center  overflow-hidden '>
-                      <img src={staticPath + items.singleImage} className='rounded-[5px] object-cover' alt="" />
+                      <img src={items.singleImage} className='rounded-[5px] object-cover' alt="" />
                     </div>
                     <div className='grid grid-cols-3 gap-2 h-[60px] overflow-hidden mt-2 rounded-[5px]'>
                       {items.multipleImages.map((imgs, index) => (
-                        <img src={staticPath + imgs} className='object-cover ' width={100} alt="" />
+                        <img src={imgs} className='object-cover ' width={100} alt="" />
                       ))}
                       {/* <div className='w-full h-full flex justify-center items-center text-[#081cff] border border-[#081cff] rounded-[5px] cursor-pointer'>See All</div> */}
                     </div>

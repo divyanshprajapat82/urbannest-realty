@@ -5,13 +5,28 @@ const {
   adminProfile,
 } = require("../../controllers/admin/adminAuthController");
 const multer = require("multer");
+// const { default: cloudinary } = require("../../..");
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
+const { cloudinary } = require("../../utils/cloudinary");
 
-let storage = multer.diskStorage({
-  destination: function (req, res, cb) {
-    return cb(null, "uploads/adminProfile");
-  },
-  filename: function (req, file, cb) {
-    cb(null, `${Date.now()}-${file.originalname}`);
+
+// let storage = multer.diskStorage({
+//   destination: function (req, res, cb) {
+//     return cb(null, "uploads/adminProfile");
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, `${Date.now()}-${file.originalname}`);
+//   },
+// });
+
+// Cloudinary is configured in utils/cloudinary
+
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: "urbannest-realty-Images/adminProfile", // folder name in your Cloudinary account
+    allowed_formats: ["jpg", "jpeg", "png", "webp"],
+    transformation: [{ quality: "auto" }], // optional optimization
   },
 });
 

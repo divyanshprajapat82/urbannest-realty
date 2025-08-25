@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { toast, ToastContainer } from 'react-toastify'
 
 export default function Add_Customers() {
@@ -10,6 +10,9 @@ export default function Add_Customers() {
         customersMessage: "",
         customerImage: ""
     })
+
+    let navigate = useNavigate()
+
 
     let VITE_APIPATH = import.meta.env.VITE_APIPATH
 
@@ -26,6 +29,9 @@ export default function Add_Customers() {
                 .then((finalData) => {
                     if (finalData.status) {
                         toast.success(finalData.msg)
+                        setTimeout(() => {
+                            navigate("/view-customers")
+                        }, 2000);
                     } else {
                         toast.error(finalData.msg)
                     }
@@ -36,6 +42,9 @@ export default function Add_Customers() {
                 .then((finalData) => {
                     if (finalData.status) {
                         toast.success(finalData.msg)
+                        setTimeout(() => {
+                            navigate("/view-customers")
+                        }, 2000);
                     } else {
                         toast.error(finalData.msg)
                     }
@@ -56,7 +65,7 @@ export default function Add_Customers() {
                         customersName: finalData.data[0].customersName,
                         customersMessage: finalData.data[0].customersMessage,
                     })
-                    setImageTarget(finalData.staticPath + finalData.data[0].customerImage)
+                    setImageTarget(finalData.data[0].customerImage)
                     // console.log(finalData.data);
                     // setPropertyType(finalData.data)
                     // setStaticPath(finalData.staticPath)

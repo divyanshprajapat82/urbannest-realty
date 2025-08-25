@@ -38,7 +38,7 @@ export default function Header({ setSideBar,
             <div className="flex items-center gap-3">
               <img
                 // src="/images/images/User_Profile.jpeg"
-                src={adminStaticPath + adminData.adminImage}
+                src={adminData.adminImage}
                 className="rounded-full w-11 h-11 object-cover"
                 alt=""
               />
@@ -56,7 +56,7 @@ export default function Header({ setSideBar,
                 <div className="px-4 py-3 border-b border-gray-100">
                   <div className="flex items-center gap-3">
                     <img
-                      src="/images/images/User_Profile.jpeg"
+                      src={adminData.adminImage}
                       className="rounded-full w-10 h-10 object-cover"
                       alt=""
                     />

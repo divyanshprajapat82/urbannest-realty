@@ -5,6 +5,8 @@ let adminLogin = async (req, res) => {
 
   let resObj;
 
+
+
   if (checkAdmin) {
     resObj = {
       status: 1,
@@ -26,7 +28,8 @@ let adminView = async (req, res) => {
   resObj = {
     status: 1,
     msg: "Loged View",
-    staticPath: process.env.ADMINPROFILESTATICPATH,
+    // staticPath: process.env.ADMINPROFILESTATICPATH,
+    // staticPath: req.file.path,
     data,
   };
 
@@ -38,19 +41,26 @@ let adminProfile = async (req, res) => {
   let insertObj = { adminName, adminPhone };
   let obj;
 
+  // console.log(req.file.path);
+
+
   // if (req.file) {
   //   insertObj["adminImage"] = req.file.fileName;
   // }
 
   if (req.file) {
-    insertObj["adminImage"] = req.file.filename;
-
-    let imgView = await AdminModel.find().select("adminImage");
-    if (imgView?.LogoImage) {
-      let deletePath = "uploads/adminProfile/" + imgView.LogoImage;
-      fs.unlinkSync(deletePath);
-    }
+    insertObj["adminImage"] = req.file.path; // Cloudinary returns URL in .path
   }
+
+  // if (req.file) {
+  //   insertObj["adminImage"] = req.file.filename;
+
+  //   let imgView = await AdminModel.find().select("adminImage");
+  //   if (imgView?.LogoImage) {
+  //     let deletePath = "uploads/adminProfile/" + imgView.LogoImage;
+  //     fs.unlinkSync(deletePath);
+  //   }
+  // }
 
   try {
     objData = {};
@@ -58,6 +68,8 @@ let adminProfile = async (req, res) => {
     obj = {
       status: 1,
       msg: "Profile Saved",
+      // staticPath: req.file.path,
+      // imageUrl: req.file.path,
       data,
     };
   } catch (error) {

@@ -64,12 +64,12 @@ export default function page() {
                                 <div className='lg:w-[70%] md:w-[60%] w-[100%]'>
                                     <div className='bg-[#fff] rounded-2xl overflow-hidden'>
                                         <div>
-                                            <img src={staticPath + imgTarget} alt="" className='w-full' />
+                                            <img src={imgTarget} alt="" className='w-full' />
                                             {items.multipleImages.length > 0 &&
                                                 <div className='flex gap-2 mt-1'>
-                                                    <img src={staticPath + items.singleImage} onClick={() => setImgTarget(items.singleImage)} className={`${imgTarget == items.singleImage && "border-[2px] border-[#DD3846]"} hover:border-[2px] border-[#DD3846] cursor-pointer`} width={100} alt="" />
+                                                    <img src={items.singleImage} onClick={() => setImgTarget(items.singleImage)} className={`${imgTarget == items.singleImage && "border-[2px] border-[#DD3846]"} hover:border-[2px] border-[#DD3846] cursor-pointer`} width={100} alt="" />
                                                     {items.multipleImages.map((imgs, index) => (
-                                                        <img src={staticPath + imgs} onClick={() => setImgTarget(imgs)} width={100} className={`${imgTarget == imgs && "border-[2px] border-[#DD3846]"} hover:border-[2px] border-[#DD3846] cursor-pointer`} alt="" />
+                                                        <img src={imgs} onClick={() => setImgTarget(imgs)} width={100} className={`${imgTarget == imgs && "border-[2px] border-[#DD3846]"} hover:border-[2px] border-[#DD3846] cursor-pointer`} alt="" />
                                                     ))}
                                                 </div>
                                             }

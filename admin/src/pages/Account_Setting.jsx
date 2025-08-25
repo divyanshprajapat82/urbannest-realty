@@ -96,7 +96,7 @@ export default function Account_Setting() {
                 console.log(finalData);
                 // setStaticPath(finalData.staticPath)
                 setUpdateData(finalData.data)
-                setImageTarget(finalData.staticPath + finalData.data[0].LogoImage)
+                setImageTarget(finalData.data[0].LogoImage)
                 // console.log(finalData.data[0].LogoImage);
 
 

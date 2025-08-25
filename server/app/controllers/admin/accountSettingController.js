@@ -6,7 +6,7 @@ let accountSettingInsert = async (req, res) => {
   let obj;
 
   if (req.file) {
-    insertObj["LogoImage"] = req.file.filename;
+    insertObj["LogoImage"] = req.file.path;
   }
 
   try {
@@ -55,13 +55,13 @@ let accountSettingUpdate = async (req, res) => {
   // }
 
   if (req.file) {
-    insertObj["LogoImage"] = req.file.filename;
+    insertObj["LogoImage"] = req.file.path;
 
-    let imgView = await AccountSettingModel.find().select("LogoImage");
-    if (imgView?.LogoImage) {
-      let deletePath = "uploads/accountSetting/" + imgView.LogoImage;
-      fs.unlinkSync(deletePath);
-    }
+    // let imgView = await AccountSettingModel.find().select("LogoImage");
+    // if (imgView?.LogoImage) {
+    //   let deletePath = "uploads/accountSetting/" + imgView.LogoImage;
+    //   fs.unlinkSync(deletePath);
+    // }
   }
 
   try {

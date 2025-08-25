@@ -5,7 +5,7 @@ let customerInsert = async (req, res) => {
   let obj;
 
   if (req.file) {
-    insertObj["customerImage"] = req.file.filename;
+    insertObj["customerImage"] = req.file.path;
   }
 
   try {
@@ -46,10 +46,27 @@ let customerDelete = async (req, res) => {
     "customerImage"
   );
 
-  for (let v of imgView) {
-    let deletePath = "uploads/happyCustomers/" + v.customerImage;
+  console.log(imgView[0].customerImage);
+
+  if (req.file) {
+    let deletePath = imgView[0].customerImage;
     fs.unlinkSync(deletePath);
   }
+
+  // for (let v of imgView) {
+  //   let deletePath =
+  //     "urbannest-realty-Images/happyCustomers/" + v.customerImage;
+  //   fs.unlinkSync(deletePath);
+  // }
+
+  //  if (imgView && imgView.customerImage) {
+  //     // Extract the public ID from the image URL
+  //     const publicId = imgView.customerImage.split("/").pop().split(".")[0];
+
+  //     // Delete the image from Cloudinary
+  //     await cloudinary.uploader.destroy(`happyCustomers/${publicId}`);
+  //   }
+
   try {
     let data = await HappyCustomersModel.deleteOne({ _id: id });
     obj = {
@@ -87,7 +104,7 @@ let customerUpdate = async (req, res) => {
   let obj;
 
   if (req.file) {
-    insertObj["customerImage"] = req.file.filename;
+    insertObj["customerImage"] = req.file.path;
     let imgView = await HappyCustomersModel.find({ _id: id }).select(
       "customerImage"
     );

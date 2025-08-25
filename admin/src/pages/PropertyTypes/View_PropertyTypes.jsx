@@ -81,7 +81,7 @@ export default function View_PropertyTypes() {
                                     <th className='p-3 text-center'>{items.propertyTypeName}</th>
                                     <td className='p-3 text-center'>
                                         <div className='flex justify-center'>
-                                            <img src={staticPath + items.propertyTypeImage} className='rounded-[5px]' width={60} alt="" />
+                                            <img src={items.propertyTypeImage} className='rounded-[5px]' width={60} alt="" />
                                         </div>
                                     </td>
                                     <td className='p-3 text-center'>

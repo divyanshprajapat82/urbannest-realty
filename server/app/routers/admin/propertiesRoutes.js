@@ -5,13 +5,15 @@ const {
   propertiesView,
   propertiesSingle,
 } = require("../../controllers/admin/propertiesController");
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
+const { cloudinary } = require("../../utils/cloudinary");
 
-let storage = multer.diskStorage({
-  destination: function (req, res, cb) {
-    return cb(null, "uploads/properties");
-  },
-  filename: function (req, file, cb) {
-    cb(null, `${Date.now()}-${file.originalname}`);
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: "urbannest-realty-Images/properties", // folder name in your Cloudinary account
+    allowed_formats: ["jpg", "jpeg", "png", "webp"],
+    transformation: [{ quality: "auto" }], // optional optimization
   },
 });
 

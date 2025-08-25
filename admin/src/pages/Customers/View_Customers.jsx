@@ -84,7 +84,7 @@ export default function View_Customers() {
                                         <div className='line-clamp-1'>{items.customersMessage}</div></th>
                                     <td className='p-3 text-center'>
                                         <div className='flex justify-center h-[60px] overflow-hidden '>
-                                            <img src={staticPath + items.customerImage} className='rounded-[5px] object-cover' width={60} alt="" />
+                                            <img src={items.customerImage} className='rounded-[5px] object-cover' width={60} alt="" />
                                         </div>
                                     </td>
                                     <td className='p-3 text-center'>

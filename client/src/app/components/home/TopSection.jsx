@@ -33,20 +33,20 @@ export default function TopSection() {
                     <div className='grid justify-between w-full md:grid-cols-2 grid-cols-1 relative md:top-[0] top-[-120px] '>
                         <div className='md:order-first order-last relative'>
                             <div className='md:block hidden'>
-                                <h1 className='text-[35px]/[42px] md:mt-[80px] mt-[40px]'>The Most Trusted Real Estate Agent & Property Dealer in Jodhpur</h1>
-                                <p className='mt-4'>Rajasthan's 1st local online property listing website.</p>
+                                <h1 className='text-[35px]/[42px] text-[#000] md:mt-[80px] mt-[40px]'>The Most Trusted Real Estate Agent & Property Dealer in Jodhpur</h1>
+                                <p className='mt-4 text-[#000]'>Rajasthan's 1st local online property listing website.</p>
                                 <h2 className='text-[#DD3846] text-[28px] font-alkatra'>Property chaiye ? Yahin aaiye !</h2>
                             </div>
                             <div className='md:hidden block text-center '>
-                                <h1 className='text-[35px]/[42px] md:mt-[80px] mt-[40px]'>The Most Trusted Real Estate Agent & Property Dealer in Jodhpur</h1>
-                                <p className='mt-4'>Rajasthan's 1st local online property listing website.</p>
+                                <h1 className='text-[35px]/[42px] text-[#000] md:mt-[80px] mt-[40px]'>The Most Trusted Real Estate Agent & Property Dealer in Jodhpur</h1>
+                                <p className='mt-4 text-[#000]'>Rajasthan's 1st local online property listing website.</p>
                                 <h2 className='text-[#DD3846] text-[28px] font-alkatra'>Property chaiye ? Yahin aaiye !</h2>
                             </div>
 
                             <div className='border border-[#00000036] p-6 lg:absolute relative md:mt-[50px] mt-[0px] bg-[#fff] lg:w-[900px] md:w-[700px] w-[100%]  rounded-2xl  z-50'>
                                 <form action="">
                                     <div className='flex sm:text-[17px] text-[15px] overflow-hidden'>
-                                        <label htmlFor="redio1" className={`flex items-center px-3 py-2  font-bold  rounded-[6px] cursor-pointer ${areaChecks == 1 && "bg-[#2A2354] text-[#fff]"}
+                                        <label htmlFor="redio1" className={`flex items-center px-3 py-2  font-bold  rounded-[6px] cursor-pointer ${areaChecks == 1 ? "bg-[#2A2354] text-[#fff]" : "text-[#000]"}
                                 `}
                                             onClick={() => setAreaChecks(1)}
                                         >
@@ -56,28 +56,28 @@ export default function TopSection() {
                                             <label htmlFor="redio1" className='ml-1  cursor-pointer'>All</label>
                                         </label>
                                         <label htmlFor="redio2" className={`flex items-center px-3 py-2 ] font-bold rounded-[6px] cursor-pointer
-                                    ${areaChecks == 2 && "bg-[#2A2354] text-[#fff]"}
+                                    ${areaChecks == 2 ? "bg-[#2A2354] text-[#fff]" : "text-[#000]"}
                                 `}
                                             onClick={() => setAreaChecks(2)}
                                         >
                                             <input type="radio" className="form-radio h-4 w-4 accent-[#fff]  cursor-pointer sm:block hidden" name="redio" value="Residential" id="redio2" />
                                             <label htmlFor="redio2" className='ml-1  cursor-pointer'>Residential</label>
                                         </label>
-                                        <label htmlFor="redio3" className={`flex items-center px-3 py-2  font-bold rounded-[6px] cursor-pointer ${areaChecks == 3 && "bg-[#2A2354] text-[#fff]"}
+                                        <label htmlFor="redio3" className={`flex items-center px-3 py-2  font-bold rounded-[6px] cursor-pointer ${areaChecks == 3 ? "bg-[#2A2354] text-[#fff]" : "text-[#000]"}
                                 `}
                                             onClick={() => setAreaChecks(3)}
                                         >
                                             <input type="radio" className="form-radio h-4 w-4 accent-[#fff]  cursor-pointer sm:block hidden" name="redio" value="Commercial" id="redio3" />
                                             <label htmlFor="redio3" className='ml-1  cursor-pointer'>Commercial</label>
                                         </label>
-                                        <label htmlFor="redio4" className={`flex items-center px-3 py-2  font-bold rounded-[6px] cursor-pointer ${areaChecks == 4 && "bg-[#2A2354] text-[#fff]"}
+                                        <label htmlFor="redio4" className={`flex items-center px-3 py-2  font-bold rounded-[6px] cursor-pointer ${areaChecks == 4 ? "bg-[#2A2354] text-[#fff]" : "text-[#000]"}
                                 `}
                                             onClick={() => setAreaChecks(4)}
                                         >
                                             <input type="radio" className="form-radio h-4 w-4 accent-[#fff]  cursor-pointer sm:block hidden" name="redio" value="Industrial" id="redio4" />
                                             <label htmlFor="redio4" className='ml-1  cursor-pointer'>Industrial</label>
                                         </label>
-                                        <label htmlFor="redio5" className={`flex items-center px-3 py-2  font-bold rounded-[6px] cursor-pointer ${areaChecks == 5 && "bg-[#2A2354] text-[#fff]"}
+                                        <label htmlFor="redio5" className={`flex items-center px-3 py-2  font-bold rounded-[6px] cursor-pointer ${areaChecks == 5 ? "bg-[#2A2354] text-[#fff]" : "text-[#000]"}
                                 `}
                                             onClick={() => setAreaChecks(5)}
                                         >
@@ -86,7 +86,7 @@ export default function TopSection() {
                                         </label>
                                     </div>
                                     <div className=' flex gap-2 mt-2 h-[58px]'>
-                                        <div onClick={() => setLocalitiesBtn(!localitiesBtn)} className='relative w-full p-3 h-full border border-[#0000002b] rounded-[6px] cursor-pointer'>
+                                        <div onClick={() => setLocalitiesBtn(!localitiesBtn)} className='relative w-full p-3 h-full text-[#000] border border-[#0000002b] rounded-[6px] cursor-pointer'>
                                             <div className='flex items-center justify-between'>
                                                 <p>Area</p>
                                                 <div>

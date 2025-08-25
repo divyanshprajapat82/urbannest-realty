@@ -146,7 +146,7 @@ export default function HappyCustomer() {
                         <div key={index} className='flex gap-8 mt-8'>
                             <div className='md:block hidden'>
                                 <div className='relative w-[300px] h-[300px] border border-[#0000003e] shadow-md bg-[#fff] rounded-2xl overflow-hidden'>
-                                    <img src={staticPath + items.customerImage} className='h-full' alt="" />
+                                    <img src={items.customerImage} className='h-full' alt="" />
                                     <div className='absolute w-full h-full top-0 left-0 bg-gradient-to-t from-[#000000] to-transparent'>
                                         <h2 className='absolute bottom-5 left-5 text-[20px] text-[#fff]'>
                                             {items.customersName}
@@ -169,7 +169,7 @@ export default function HappyCustomer() {
                                 {happyCustomerImg.map((items, index) => (
                                     <div>
                                         <div key={index} onClick={() => setImageClick(items.customerImage)} className='w-[100px] h-[100px] bg-[#fff] border border-[#0000003e] shadow-md rounded-2xl overflow-hidden cursor-pointer'>
-                                            <img src={staticPath + items.customerImage} className='h-full' alt="" />
+                                            <img src={items.customerImage} className='h-full' alt="" />
                                         </div>
                                     </div>
                                 ))}
