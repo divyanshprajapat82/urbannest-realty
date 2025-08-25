@@ -50,7 +50,6 @@ export default function Header() {
                                 {accountSetting.map((items, index) => (
 
                                     <img src={items.LogoImage} className='sm:w-[160px] w-[120px]' alt="surana-logo" />
-                                    // <img src="/images/Urbannes.png" className='sm:w-[160px] w-[120px]' alt="surana-logo" />
                                 ))}
                             </div>
                         </div>
@@ -105,10 +104,7 @@ export default function Header() {
                         <div className='flex items-center justify-between'>
                             <div className='cursor-pointer'>
                                 {accountSetting.map((items, index) => (
-
-                                    // <img src={items.LogoImage} className='sm:w-[160px] w-[120px]' alt="surana-logo" />
-                                    // <img src="/images/Urbannes.png" className='sm:w-[160px] w-[120px]' alt="surana-logo" />
-                                <img src={items.LogoImage} width={100} alt="surana-logo" />
+                                    <img src={items.LogoImage} width={100} alt="surana-logo" />
                                 ))}
                             </div>
                             <div className=''>
